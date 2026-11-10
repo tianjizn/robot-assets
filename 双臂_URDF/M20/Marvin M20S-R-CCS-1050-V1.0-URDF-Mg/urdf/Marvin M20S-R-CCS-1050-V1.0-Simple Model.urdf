@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Marvin M20S-R-CCS-1050-V1.0-Simple Model">
+  <link
+    name="right base_link">
+    <inertial>
+      <origin
+        xyz="-9.9E-05 -0.000277 0.065583"
+        rpy="0 0 0" />
+      <mass
+        value="5.574488" />
+      <inertia
+        ixx="0.013114"
+        ixy="-7E-06"
+        ixz="-1.5E-05"
+        iyy="0.0132"
+        iyz="4.8E-05"
+        izz="0.014677" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5451 0.56471 0.60392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_Link-J1">
+    <inertial>
+      <origin
+        xyz="-0.000142 -0.000279 -0.038052"
+        rpy="0 0 0" />
+      <mass
+        value="8.280965" />
+      <inertia
+        ixx="0.057135"
+        ixy="-3.6E-05"
+        ixz="0.00026"
+        iyy="0.061826"
+        iyz="-7E-05"
+        izz="0.020826" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.305"
+      rpy="0 0 0" />
+    <parent
+      link="right base_link" />
+    <child
+      link="right_Link-J1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9671"
+      upper="2.9671"
+      effort="490"
+      velocity="2.0944" />
+  </joint>
+  <link
+    name="right_Link-J2">
+    <inertial>
+      <origin
+        xyz="0.000103 0.10762 0.007572"
+        rpy="0 0 0" />
+      <mass
+        value="5.9647" />
+      <inertia
+        ixx="0.067552"
+        ixy="4.7E-05"
+        ixz="-1.1E-05"
+        iyy="0.020898"
+        iyz="-0.004977"
+        izz="0.063214" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="right_Link-J1" />
+    <child
+      link="right_Link-J2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="490"
+      velocity="2.0944" />
+  </joint>
+  <link
+    name="right_Link-J3">
+    <inertial>
+      <origin
+        xyz="0.0145 0.002547 -0.066586"
+        rpy="0 0 0" />
+      <mass
+        value="5.640631" />
+      <inertia
+        ixx="0.067433"
+        ixy="0.000133"
+        ixz="0.005681"
+        iyy="0.070039"
+        iyz="0.001028"
+        izz="0.011751" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J3"
+    type="revolute">
+    <origin
+      xyz="0 0.5 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="right_Link-J2" />
+    <child
+      link="right_Link-J3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9671"
+      upper="2.9671"
+      effort="230"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="right_Link-J4">
+    <inertial>
+      <origin
+        xyz="0.011043 -0.064625 0.007523"
+        rpy="0 0 0" />
+      <mass
+        value="3.314539" />
+      <inertia
+        ixx="0.02583"
+        ixy="-0.002483"
+        ixz="-0.000288"
+        iyy="0.009936"
+        iyz="0.001657"
+        izz="0.023779" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J4"
+    type="revolute">
+    <origin
+      xyz="0.023 0 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="right_Link-J3" />
+    <child
+      link="right_Link-J4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.5307"
+      upper="1.0472"
+      effort="230"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="right_Link-J5">
+    <inertial>
+      <origin
+        xyz="-0.000171 0.006376 -0.138499"
+        rpy="0 0 0" />
+      <mass
+        value="2.925222" />
+      <inertia
+        ixx="0.017569"
+        ixy="4E-06"
+        ixz="5.3E-05"
+        iyy="0.0157"
+        iyz="0.001584"
+        izz="0.005694" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5451 0.56471 0.60392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J5"
+    type="revolute">
+    <origin
+      xyz="0.023 -0.43 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="right_Link-J4" />
+    <child
+      link="right_Link-J5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.9671"
+      upper="2.9671"
+      effort="80"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="right_Link-J6">
+    <inertial>
+      <origin
+        xyz="-0.027312 -0.000526 0.011163"
+        rpy="0 0 0" />
+      <mass
+        value="2.334885" />
+      <inertia
+        ixx="0.003879"
+        ixy="-3.9E-05"
+        ixz="-0.001768"
+        iyy="0.009178"
+        iyz="1.4E-05"
+        izz="0.009019" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J6"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="right_Link-J5" />
+    <child
+      link="right_Link-J6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.0472"
+      upper="1.0472"
+      effort="80"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="right_Link-J7">
+    <inertial>
+      <origin
+        xyz="-7.7E-05 -0.04767 0.011429"
+        rpy="0 0 0" />
+      <mass
+        value="0.89196" />
+      <inertia
+        ixx="0.004099"
+        ixy="-3E-06"
+        ixz="-3E-06"
+        iyy="0.002205"
+        iyz="0.000558"
+        izz="0.002858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5451 0.56471 0.60392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin M20S-R-CCS-1050-V1.0-Simple Model/meshes/right_Link-J7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right Joint-J7"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="right_Link-J6" />
+    <child
+      link="right_Link-J7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="80"
+      velocity="3.1416" />
+  </joint>
+</robot>

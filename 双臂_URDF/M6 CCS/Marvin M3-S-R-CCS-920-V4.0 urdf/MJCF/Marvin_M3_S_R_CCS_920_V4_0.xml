@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="Marvin_M3_S_R_CCS_920_V4_0">
+  <compiler angle="radian" meshdir="../meshes" eulerseq="xyz" autolimits="true" />
+  <option timestep="0.002" integrator="implicitfast" cone="elliptic" impratio="10" gravity="0 0 -9.81" />
+  <default>
+    <default class="arm">
+      <joint type="hinge" axis="0 0 1" armature="0.03" damping="0.5" frictionloss="0.2" />
+    </default>
+    <default class="wrist">
+      <joint type="hinge" axis="0 0 1" armature="0.002" damping="0.1" frictionloss="0.05" />
+    </default>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2" density="0" />
+    </default>
+    <default class="collision">
+      <geom group="3" contype="1" conaffinity="1" friction="0.6 0.02 0.002" solref="0.005 1" solimp="0.9 0.95 0.001" />
+    </default>
+  </default>
+  <asset>
+    <material name="metal" rgba="0.75 0.76 0.78 1" specular="0.4" shininess="0.5" />
+    <material name="dark" rgba="0.18 0.19 0.21 1" />
+    <mesh name="Base_R" file="Base_R.STL" />
+    <mesh name="Link1_R" file="Link1_R.STL" />
+    <mesh name="Link2_R" file="Link2_R.STL" />
+    <mesh name="Link3_R" file="Link3_R.STL" />
+    <mesh name="Link4_R" file="Link4_R.STL" />
+    <mesh name="Link5_R" file="Link5_R.STL" />
+    <mesh name="Link6_R" file="Link6_R.STL" />
+    <mesh name="Link7_R" file="Link7_R.STL" />
+  </asset>
+  <worldbody>
+    <light name="key" pos="1.5 -1.5 2.5" dir="-1 1 -2" directional="true" castshadow="true" />
+    <light name="fill" pos="-1.5 1.5 1.5" dir="1 -1 -1" directional="true" diffuse="0.4 0.4 0.4" />
+    <geom name="floor" type="plane" size="3 3 0.05" pos="0 0 -0.001" condim="3" friction="0.7 0.02 0.002" rgba="0.32 0.34 0.38 1" />
+    <camera name="overview" pos="1.6 -1.6 1.3" xyaxes="0.707 0.707 0 -0.35 0.35 0.87" />
+    <body name="Base_R">
+      <inertial pos="0.00041175 0.00007301 0.03742423" mass="1.1015199" fullinertia="0.00095105 0.00094608 0.00119485 -1.17e-06 -1.07e-05 -4.24e-06" />
+      <geom name="Base_R_visual" class="visual" mesh="Base_R" pos="0 0 0" quat="1 0 0 0" />
+      <geom name="Base_R_col0" class="collision" type="cylinder" size="0.033028357 0.048024986" pos="0.002713779 0 0.017999999" quat="0.70710678 0.70710678 0 0" />
+      <body name="Link1_R" pos="0 0 0.1745" quat="1 0 0 0">
+        <inertial pos="0.00011223 0.00593728  -0.04061573" mass="2.1476833" fullinertia="0.00631026 0.00666529 0.00232406 7.85e-06 2.75e-06 0.00051846" />
+        <joint name="Joint1_R" armature="0.14832" damping="0.003204" frictionloss="0.9603" range="-2.9670597 2.9670597" />
+        <geom name="Link1_R_visual" class="visual" mesh="Link1_R" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="Link1_R_col0" class="collision" type="capsule" size="0.045399517 0.080886759" pos="-7.5809658e-07 -1.2107193e-07 -0.039339103" />
+        <body name="Link2_R" pos="0 0 0" quat="0.70710548 0.70710808 0 0">
+          <inertial pos="0.00009068 0.05296421 0.00942243" mass="2.1882602" fullinertia="0.01121696 0.00343556 0.01051583 9.45e-06 -2.81e-06 -0.00110305" />
+          <joint name="Joint2_R" armature="0.14832" damping="0.001628" frictionloss="1.356" range="-2.0943951 2.0943951" />
+          <geom name="Link2_R_visual" class="visual" mesh="Link2_R" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="Link2_R_col0" class="collision" type="capsule" size="0.0515422 0.087273061" pos="4.5485795e-06 0.045325819 0" quat="0.70710678 0.70710678 0 0" />
+          <body name="Link3_R" pos="0 0.4 0" quat="0.70710548 -0.70710808 0 0">
+            <inertial pos="0.00588308 0.00079656 -0.11435153" mass="2.2459871" fullinertia="0.02297472 0.02333711 0.0026081 2.807e-05 0.00155392 0.00021547" />
+            <joint name="Joint3_R" armature="0.067" damping="0.0001344" frictionloss="0.5593" range="-2.9670597 2.9670597" />
+            <geom name="Link3_R_visual" class="visual" mesh="Link3_R" pos="0 0 0" quat="1 0 0 0" />
+            <geom name="Link3_R_col0" class="collision" type="capsule" size="0.044364307 0.13042262" pos="0.010788344 1.8626451e-09 -0.10306163" />
+            <body name="Link4_R" pos="0.018 0 0" quat="-2.5973435e-06 2.597353e-06 -0.70710808 0.70710548">
+              <inertial pos="0.00795627 -0.04458816 0.00665023" mass="1.7282054" fullinertia="0.00630043 0.0024288 0.0058889 -0.00072065 -9.207e-05 0.00051949" />
+              <joint name="Joint4_R" armature="0.067" damping="0.0003004" frictionloss="0.3386" range="-2.5307274 1.0471976" />
+              <geom name="Link4_R_visual" class="visual" mesh="Link4_R" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="Link4_R_col0" class="collision" type="capsule" size="0.047909278 0.072854489" pos="0.0042722914 -0.035288841 0" quat="0.70710678 0.70710678 0 0" />
+              <body name="Link5_R" pos="0.018 -0.425 0" quat="-2.5973435e-06 2.597353e-06 -0.70710808 0.70710548">
+                <inertial pos="-0.00039695 0.00001919 -0.14836423" mass="2.4418002" fullinertia="0.0183529 0.0177872 0.00292641 -4.142e-05 8.017e-05 0.0001302" />
+                <joint name="Joint5_R" armature="0.088" damping="0.0002715" frictionloss="0.1649" range="-2.9670597 2.9670597" />
+                <geom name="Link5_R_visual" class="visual" mesh="Link5_R" pos="0 0 0" quat="1 0 0 0" />
+                <geom name="Link5_R_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                <body name="Link6_R" pos="0 0 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                  <inertial pos="0.00033938 0.00458335 -0.00026144" mass="0.72773724" fullinertia="0.00043617 0.00049648 0.00040006 -1.99e-06 7.8e-07 2.64e-06" />
+                  <joint name="Joint6_R" armature="0.088" damping="0.0002678" frictionloss="0.6869" range="-1.0471976 1.0471976" />
+                  <geom name="Link6_R_visual" class="visual" mesh="Link6_R" pos="0 0 0" quat="1 0 0 0" />
+                  <geom name="Link6_R_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                  <body name="Link7_R" pos="0 0 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                    <inertial pos="-0.00009108 -0.03153255 0.00889371" mass="0.68606" fullinertia="0.00173687 0.00089035 0.00139406 -3.45e-06 -1.16e-06 0.0003068" />
+                    <joint name="Joint7_R" armature="0.088" damping="1.19e-05" frictionloss="0.0861" range="-1.5707963 1.5707963" />
+                    <geom name="Link7_R_visual" class="visual" mesh="Link7_R" pos="0 0 0" quat="1 0 0 0" />
+                    <geom name="Link7_R_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="Base_R" body2="Link1_R" />
+    <exclude body1="Link1_R" body2="Link2_R" />
+    <exclude body1="Link2_R" body2="Link3_R" />
+    <exclude body1="Link3_R" body2="Link4_R" />
+    <exclude body1="Link4_R" body2="Link5_R" />
+    <exclude body1="Link5_R" body2="Link6_R" />
+    <exclude body1="Link6_R" body2="Link7_R" />
+  </contact>
+  <keyframe>
+    <key name="home" qpos="0 1 -1.5 0 0.8 0 0" />
+  </keyframe>
+  <actuator>
+    <position name="Joint1_act" joint="Joint1_R" kp="114.59156" kv="34.377468" ctrlrange="-2.9670597 2.9670597" forcerange="-108 108" />
+    <position name="Joint2_act" joint="Joint2_R" kp="114.59156" kv="34.377468" ctrlrange="-2.0943951 2.0943951" forcerange="-108 108" />
+    <position name="Joint3_act" joint="Joint3_R" kp="114.59156" kv="34.377468" ctrlrange="-2.9670597 2.9670597" forcerange="-66 66" />
+    <position name="Joint4_act" joint="Joint4_R" kp="91.673247" kv="22.918312" ctrlrange="-2.5307274 1.0471976" forcerange="-66 66" />
+    <position name="Joint5_act" joint="Joint5_R" kp="57.29578" kv="11.459156" ctrlrange="-2.9670597 2.9670597" forcerange="-18 18" />
+    <position name="Joint6_act" joint="Joint6_R" kp="57.29578" kv="11.459156" ctrlrange="-1.0471976 1.0471976" forcerange="-18 18" />
+    <position name="Joint7_act" joint="Joint7_R" kp="57.29578" kv="11.459156" ctrlrange="-1.5707963 1.5707963" forcerange="-18 18" />
+  </actuator>
+</mujoco>
