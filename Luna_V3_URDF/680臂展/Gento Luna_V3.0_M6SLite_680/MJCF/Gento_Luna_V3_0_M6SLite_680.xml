@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="Gento_Luna_V3_0_M6SLite_680">
+  <compiler angle="radian" meshdir="../meshes" eulerseq="xyz" autolimits="true" />
+  <option timestep="0.002" integrator="implicitfast" cone="elliptic" impratio="10" gravity="0 0 -9.81" />
+  <default>
+    <default class="arm">
+      <joint type="hinge" axis="0 0 1" armature="0.03" damping="0.5" frictionloss="0.2" />
+    </default>
+    <default class="wrist">
+      <joint type="hinge" axis="0 0 1" armature="0.002" damping="0.1" frictionloss="0.05" />
+    </default>
+    <default class="head">
+      <joint type="hinge" axis="0 0 1" armature="0.004" damping="0.08" frictionloss="0.03" />
+    </default>
+    <default class="visual">
+      <geom type="mesh" contype="0" conaffinity="0" group="2" density="0" />
+    </default>
+    <default class="collision">
+      <geom group="3" contype="1" conaffinity="1" friction="0.6 0.02 0.002" solref="0.005 1" solimp="0.9 0.95 0.001" />
+    </default>
+  </default>
+  <asset>
+    <material name="metal" rgba="0.75 0.76 0.78 1" specular="0.4" shininess="0.5" />
+    <material name="dark" rgba="0.18 0.19 0.21 1" />
+    <mesh name="base_Link" file="meshes_simplified/base_Link.STL" />
+    <mesh name="front left wheel_Link_1" file="front left wheel_Link_1.STL" />
+    <mesh name="front left wheel_Link_2" file="front left wheel_Link_2.STL" />
+    <mesh name="front right wheel_Link_1" file="front right wheel_Link_1.STL" />
+    <mesh name="front right wheel_Link_2" file="front right wheel_Link_2.STL" />
+    <mesh name="rear left wheel_Link_1" file="rear left wheel_Link_1.STL" />
+    <mesh name="rear left wheel_Link_2" file="rear left wheel_Link_2.STL" />
+    <mesh name="rear right wheel_Link_1" file="rear right wheel_Link_1.STL" />
+    <mesh name="rear right wheel_Link_2" file="rear right wheel_Link_2.STL" />
+    <mesh name="ZLD_Link" file="ZLD_Link.STL" />
+    <mesh name="YLD_Link" file="YLD_Link.STL" />
+    <mesh name="C1_Link" file="C1_Link.STL" />
+    <mesh name="C2_Link" file="C2_Link.STL" />
+    <mesh name="C3_Link" file="C3_Link.STL" />
+    <mesh name="C4_Link" file="C4_Link.STL" />
+    <mesh name="C5_Link" file="C5_Link.STL" />
+    <mesh name="C6_Link" file="C6_Link.STL" />
+    <mesh name="C7_Link" file="C7_Link.STL" />
+    <mesh name="C8_Link" file="C8_Link.STL" />
+    <mesh name="IMU_Link" file="IMU_Link.STL" />
+    <mesh name="XJ_Link" file="XJ_Link.STL" />
+    <mesh name="Gento Luna_Leg_J1_Link" file="Gento Luna_Leg_J1_Link.STL" />
+    <mesh name="Gento Luna_Leg_J2_Link" file="Gento Luna_Leg_J2_Link.STL" />
+    <mesh name="Gento Luna_Leg_J3_Link" file="Gento Luna_Leg_J3_Link.STL" />
+    <mesh name="Gento Luna_Leg_J4_Link" file="Gento Luna_Leg_J4_Link.STL" />
+    <mesh name="Gento Luna_Leg_J5_Link" file="Gento Luna_Leg_J5_Link.STL" />
+    <mesh name="Gento Luna_Leg_J6_Link" file="Gento Luna_Leg_J6_Link.STL" />
+    <mesh name="Base_R" file="Base_R.STL" />
+    <mesh name="Link1_R" file="Link1_R.STL" />
+    <mesh name="Link2_R" file="Link2_R.STL" />
+    <mesh name="Link3_R" file="Link3_R.STL" />
+    <mesh name="Link4_R" file="Link4_R.STL" />
+    <mesh name="Link5_R" file="Link5_R.STL" />
+    <mesh name="Link6_R" file="Link6_R.STL" />
+    <mesh name="Link7_R" file="Link7_R.STL" />
+    <mesh name="Base_L" file="Base_L.STL" />
+    <mesh name="Link1_L" file="Link1_L.STL" />
+    <mesh name="Link2_L" file="Link2_L.STL" />
+    <mesh name="Link3_L" file="Link3_L.STL" />
+    <mesh name="Link4_L" file="Link4_L.STL" />
+    <mesh name="Link5_L" file="Link5_L.STL" />
+    <mesh name="Link6_L" file="Link6_L.STL" />
+    <mesh name="Link7_L" file="Link7_L.STL" />
+    <mesh name="Head_J1_Link" file="Head_J1_Link.STL" />
+    <mesh name="Head_J2_Link" file="Head_J2_Link.STL" />
+    <mesh name="Arm_L8_Link" file="V4.0/Arm_R8_Link.STL" />
+    <mesh name="Waist_Depth Carema_Link" file="V4.0/Waist_Depth Carema_Link.STL" />
+    <mesh name="Head_Depth Carema_Link" file="V4.0/Head_Depth Carema_Link.STL" />
+    <mesh name="Head_Right Eye_Link" file="V4.0/Head_Right Eye_Link.STL" />
+  </asset>
+  <worldbody>
+    <light name="key" pos="1.5 -1.5 2.5" dir="-1 1 -2" directional="true" castshadow="true" />
+    <light name="fill" pos="-1.5 1.5 1.5" dir="1 -1 -1" directional="true" diffuse="0.4 0.4 0.4" />
+    <geom name="floor" type="plane" size="3 3 0.05" pos="0 0 -0.001" condim="3" friction="0.7 0.02 0.002" rgba="0.32 0.34 0.38 1" />
+    <camera name="overview" pos="1.6 -1.6 1.3" xyaxes="0.707 0.707 0 -0.35 0.35 0.87" />
+    <body name="base_Link">
+      <inertial pos="-0.093 -0.0000363 0.0622" mass="68.93" fullinertia="0.64946 1.019 1.5021 0.00025638 -0.0042927 -0.00015308" />
+      <geom name="base_Link_visual" class="visual" mesh="base_Link" pos="0 0 0" quat="1 0 0 0" />
+      <geom name="base_Link_col0" class="collision" type="capsule" size="0.1864998 0.28456688" pos="0.0097208619 8.1956387e-07 0.20399052" quat="0.70710678 0 0.70710678 0" />
+      <body name="front left wheel_Link_1" pos="0.23072 0.21738 0.206" quat="1 0 0 0">
+        <inertial pos="-0.00066985 -0.02419 -0.061628" mass="0.64977" fullinertia="0.00076148 0.00058131 0.00052221 -1.7245e-08 -3.525e-07 -0.00023758" />
+        <joint name="front left wheel_joint_1" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+        <geom name="front left wheel_Link_1_visual" class="visual" mesh="front left wheel_Link_1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="front left wheel_Link_1_col0" class="collision" type="capsule" size="0.033150002 0.068212502" pos="-0.00071653258 -0.018383967 -0.078750007" />
+        <body name="front left wheel_Link_2" pos="-0.00071653 0.00061603 -0.136" quat="0.70710548 0.70710808 0 0">
+          <inertial pos="-2.4339E-06 2.8529E-06 0.00078462" mass="1.2232" fullinertia="0.0020517 0.0020521 0.0037675 1.24e-08 -7.2992e-08 2.471e-07" />
+          <joint name="front left wheel_joint_2" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+          <geom name="front left wheel_Link_2_visual" class="visual" mesh="front left wheel_Link_2" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="front left wheel_Link_2_col0" class="collision" type="cylinder" size="0.050787501 0.059500001" pos="0 0 0.013" quat="0.70710678 0.70710678 0 0" />
+        </body>
+      </body>
+      <body name="front right wheel_Link_1" pos="0.22928 -0.21738 0.206" quat="1 0 0 0">
+        <inertial pos="0.00066985 0.02419 -0.061628" mass="0.64977" fullinertia="0.00076148 0.00058131 0.00052221 -1.7245e-08 3.525e-07 0.00023758" />
+        <joint name="front right wheel_joint_1" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+        <geom name="front right wheel_Link_1_visual" class="visual" mesh="front right wheel_Link_1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="front right wheel_Link_1_col0" class="collision" type="capsule" size="0.033150002 0.068212502" pos="0.00071653258 0.018383967 -0.078750007" />
+        <body name="front right wheel_Link_2" pos="0.00071653 -0.00061603 -0.136" quat="-2.5973435e-06 -2.597353e-06 0.70710808 0.70710548">
+          <inertial pos="-2.4339E-06 2.8529E-06 0.00078462" mass="1.2232" fullinertia="0.0020517 0.0020521 0.0037675 1.24e-08 -7.2992e-08 2.471e-07" />
+          <joint name="front right wheel_joint_2" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+          <geom name="front right wheel_Link_2_visual" class="visual" mesh="front right wheel_Link_2" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="front right wheel_Link_2_col0" class="collision" type="cylinder" size="0.050787501 0.059500001" pos="0 0 0.013" quat="0.70710678 0.70710678 0 0" />
+        </body>
+      </body>
+      <body name="rear left wheel_Link_1" pos="-0.22928 0.21738 0.206" quat="1 0 0 0">
+        <inertial pos="-0.00066985 -0.02419 -0.061628" mass="0.64977" fullinertia="0.00076148 0.00058131 0.00052221 -1.7245e-08 -3.525e-07 -0.00023758" />
+        <joint name="rear left wheel_joint_1" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+        <geom name="rear left wheel_Link_1_visual" class="visual" mesh="rear left wheel_Link_1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="rear left wheel_Link_1_col0" class="collision" type="capsule" size="0.033150002 0.068212502" pos="-0.00071653258 -0.018383967 -0.078750007" />
+        <body name="rear left wheel_Link_2" pos="-0.00071653 0.00061603 -0.136" quat="0.70710548 0.70710808 0 0">
+          <inertial pos="-1.6476E-06 3.3687E-06 0.00078462" mass="1.2232" fullinertia="0.0020518 0.002052 0.0037675 8.8177e-08 -9.2298e-09 2.5749e-07" />
+          <joint name="rear left wheel_joint_2" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+          <geom name="rear left wheel_Link_2_visual" class="visual" mesh="rear left wheel_Link_2" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="rear left wheel_Link_2_col0" class="collision" type="cylinder" size="0.05078733 0.059499659" pos="0 0 0.013" quat="0.70710678 0.70710678 0 0" />
+        </body>
+      </body>
+      <body name="rear right wheel_Link_1" pos="-0.23072 -0.21738 0.206" quat="1 0 0 0">
+        <inertial pos="0.00066985 0.02419 -0.061628" mass="0.64977" fullinertia="0.00076148 0.00058131 0.00052221 -1.7245e-08 3.525e-07 0.00023758" />
+        <joint name="rear right wheel_joint_1" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+        <geom name="rear right wheel_Link_1_visual" class="visual" mesh="rear right wheel_Link_1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="rear right wheel_Link_1_col0" class="collision" type="capsule" size="0.033150002 0.068212502" pos="0.00071653258 0.018383967 -0.078750007" />
+        <body name="rear right wheel_Link_2" pos="0.00071653 -0.00061603 -0.136" quat="-2.5973435e-06 -2.597353e-06 0.70710808 0.70710548">
+          <inertial pos="-2.4339E-06 2.8529E-06 0.00078462" mass="1.2232" fullinertia="0.0020517 0.0020521 0.0037675 1.24e-08 -7.2992e-08 2.471e-07" />
+          <joint name="rear right wheel_joint_2" armature="0.01" damping="0.3" frictionloss="0.1" range="-2.967 2.967" actuatorfrcrange="-0 0" />
+          <geom name="rear right wheel_Link_2_visual" class="visual" mesh="rear right wheel_Link_2" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="rear right wheel_Link_2_col0" class="collision" type="cylinder" size="0.050787501 0.059500001" pos="0 0 0.013" quat="0.70710678 0.70710678 0 0" />
+        </body>
+      </body>
+      <body name="ZLD_Link" pos="0.22097 0.2007 0.36602" quat="0.25596406 0.10934279 0.038256467 0.95972027">
+        <inertial pos="-0.044089 -5.1873E-10 -0.031524" mass="0.011716" fullinertia="3.6795e-07 6.5201e-07 5.8894e-07 5.1524e-14 -7.7265e-09 2.1499e-14" />
+        <geom name="ZLD_Link_visual" class="visual" mesh="ZLD_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="ZLD_Link_col0" class="collision" type="cylinder" size="0.026821736 0.039276809" pos="-0.012279352 0 -0.017425548" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="YLD_Link" pos="-0.22097 -0.2007 0.36602" quat="0.95971677 0.038254972 -0.10934331 -0.25597719">
+        <inertial pos="-0.044089 -5.1873E-10 -0.031524" mass="0.011716" fullinertia="3.6795e-07 6.5201e-07 5.8894e-07 5.1524e-14 -7.7265e-09 2.1499e-14" />
+        <geom name="YLD_Link_visual" class="visual" mesh="YLD_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="YLD_Link_col0" class="collision" type="cylinder" size="0.026821736 0.039276809" pos="-0.012279352 0 -0.017425548" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C1_Link" pos="-0.17391 -0.2725 0.22896" quat="0.70710548 0.70710808 0 0">
+        <inertial pos="-2.7419E-07 3.7626E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8229e-12 -7.4382e-12 1.0192e-10" />
+        <geom name="C1_Link_visual" class="visual" mesh="C1_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C1_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C2_Link" pos="0.17397 -0.2725 0.22859" quat="0.70710548 0.70710808 0 0">
+        <inertial pos="-2.7419E-07 3.7626E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8229e-12 -7.4382e-12 1.0192e-10" />
+        <geom name="C2_Link_visual" class="visual" mesh="C2_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C2_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C3_Link" pos="0.32715 -0.18131 0.22859" quat="0.57551846 0.57552057 0.41082588 0.41082437">
+        <inertial pos="-2.7337E-07 3.7644E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8661e-12 -7.4542e-12 1.0196e-10" />
+        <geom name="C3_Link_visual" class="visual" mesh="C3_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C3_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C4_Link" pos="0.32715 0.18131 0.22859" quat="0.41082226 0.41082377 0.57552208 0.57551997">
+        <inertial pos="-2.7336E-07 3.7644E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8668e-12 -7.452e-12 1.0196e-10" />
+        <geom name="C4_Link_visual" class="visual" mesh="C4_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C4_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C5_Link" pos="0.17397 0.2725 0.22859" quat="-2.5973435e-06 -2.597353e-06 0.70710808 0.70710548">
+        <inertial pos="-2.7419E-07 3.7626E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8229e-12 -7.4382e-12 1.0192e-10" />
+        <geom name="C5_Link_visual" class="visual" mesh="C5_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C5_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C6_Link" pos="-0.17391 0.2725 0.22896" quat="-2.5973435e-06 -2.597353e-06 -0.70710808 -0.70710548">
+        <inertial pos="-2.7419E-07 3.7626E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8229e-12 -7.4382e-12 1.0192e-10" />
+        <geom name="C6_Link_visual" class="visual" mesh="C6_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C6_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C7_Link" pos="-0.32119 0.17219 0.22858" quat="0.45906048 0.45906217 -0.53783247 -0.53783049">
+        <inertial pos="-2.7359E-07 3.7639E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8544e-12 -7.4493e-12 1.0196e-10" />
+        <geom name="C7_Link_visual" class="visual" mesh="C7_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C7_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="C8_Link" pos="-0.32119 -0.17219 0.22858" quat="0.53785176 0.53785373 -0.45903725 -0.45903557">
+        <inertial pos="-2.7356E-07 3.7639E-06 -0.012402" mass="0.019788" fullinertia="1.8765e-06 4.3593e-06 4.9605e-06 2.8561e-12 -7.4465e-12 1.0195e-10" />
+        <geom name="C8_Link_visual" class="visual" mesh="C8_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="C8_Link_col0" class="collision" type="capsule" size="0.01209125 0.021877939" pos="0 0 -0.0152" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="IMU_Link" pos="0 0 0.1" quat="1 0 0 0">
+        <inertial pos="-0.0021919 0.0026054 -0.0067841" mass="0.0072701" fullinertia="7.4527e-07 2.2977e-07 9.4254e-07 -6.1438e-09 9.4122e-11 7.65e-10" />
+        <geom name="IMU_Link_visual" class="visual" mesh="IMU_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="IMU_Link_col0" class="collision" type="capsule" size="0.012 0.018275" pos="-0.0040086498 -4.7124922e-07 -0.0055999998" quat="0.70710678 0.70710678 0 0" />
+      </body>
+      <body name="XJ_Link" pos="0.34185 0.0175 0.199" quat="0.49999816 0.5 0.50000184 0.5">
+        <inertial pos="3.4694E-18 0 0.00073871" mass="0.00017226" fullinertia="5.5043e-10 5.5043e-10 9.8412e-10 3.9032e-42 -1.3728e-29 -1.2457e-42" />
+        <geom name="XJ_Link_visual" class="visual" mesh="XJ_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="XJ_Link_col0" class="collision" type="capsule" size="0.012 0.037802339" pos="-0.017473336 0 -0.0085400008" quat="0.70710678 0 0.70710678 0" />
+      </body>
+      <body name="Gento Luna_Leg_J1_Link" pos="0.107 0 0.16" quat="0.49999816 0.5 0.50000184 0.5">
+        <inertial pos="-0.00305605 0.11879615 0.00090574" mass="6.0418597" fullinertia="0.05014865 0.01918359 0.04606091 -0.00085033 3.711e-05 -0.00035279" />
+        <joint name="Gento Luna_Leg_J1_Joint" armature="0.14832" damping="0.000384" frictionloss="0.23667" range="-0.19198622 0.19198622" actuatorfrcrange="-217 217" />
+        <geom name="Gento Luna_Leg_J1_Link_visual" class="visual" mesh="Gento Luna_Leg_J1_Link" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="Gento Luna_Leg_J1_Link_col0" class="collision" type="capsule" size="0.070124999 0.1404625" pos="0 0.077749997 0" quat="0.70710678 0.70710678 0 0" />
+        <body name="Gento Luna_Leg_J2_Link" pos="0 0.165 0" quat="0.70710548 0 -0.70710808 0">
+          <inertial pos="0.00164163 0.20480598 0.00707016" mass="7.2213119" fullinertia="0.13625794 0.02626537 0.1341894 0.0002198 -5.379e-05 0.00455997" />
+          <joint name="Gento Luna_Leg_J2_Joint" armature="0.14832" damping="0.002158" frictionloss="1.70695" range="-0.17453293 1.5707963" actuatorfrcrange="-217 217" />
+          <geom name="Gento Luna_Leg_J2_Link_visual" class="visual" mesh="Gento Luna_Leg_J2_Link" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="Gento Luna_Leg_J2_Link_col0" class="collision" type="capsule" size="0.074055806 0.19379762" pos="0 0.14999878 0" quat="0.70710678 0.70710678 0 0" />
+          <body name="Gento Luna_Leg_J3_Link" pos="0 0.3 0" quat="1 0 0 0">
+            <inertial pos="-0.00357006 0.14573557 -0.00024996" mass="4.6712167" fullinertia="0.0982139 0.03054277 0.08828479 0.00087722 -4.61e-06 2.818e-05" />
+            <joint name="Gento Luna_Leg_J3_Joint" armature="2.9184" damping="0.003221" frictionloss="1.449" range="-2.443461 0.17453293" actuatorfrcrange="-217 217" />
+            <geom name="Gento Luna_Leg_J3_Link_visual" class="visual" mesh="Gento Luna_Leg_J3_Link" pos="0 0 0" quat="1 0 0 0" />
+            <geom name="Gento Luna_Leg_J3_Link_col0" class="collision" type="capsule" size="0.076478988 0.1938" pos="0 0.14999999 0" quat="0.70710678 0.70710678 0 0" />
+            <body name="Gento Luna_Leg_J4_Link" pos="0 0.3 0" quat="1 0 0 0">
+              <inertial pos="-0.03690660 -0.00007427 0.01019860" mass="5.9004635" fullinertia="0.01031884 0.02997544 0.02890014 1.703e-05 0.00214964 -1.69e-06" />
+              <joint name="Gento Luna_Leg_J4_Joint" armature="2.9184" damping="0.003221" frictionloss="1.449" range="-1.9198622 0.95993109" actuatorfrcrange="-108 108" />
+              <geom name="Gento Luna_Leg_J4_Link_visual" class="visual" mesh="Gento Luna_Leg_J4_Link" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="Gento Luna_Leg_J4_Link_col0" class="collision" type="cylinder" size="0.052912004 0.065025002" pos="-0.0025000013 1.1771917e-06 0" quat="0.70710678 0 0.70710678 0" />
+              <body name="Gento Luna_Leg_J5_Link" pos="0 0 0" quat="0.70710548 0 0.70710808 0">
+                <inertial pos="-0.00154757 0.12766899 -0.01565105" mass="3.7617757" fullinertia="0.03428558 0.02062551 0.02033725 -0.00014969 -0.00014018 0.00372161" />
+                <joint name="Gento Luna_Leg_J5_Joint" armature="2.9184" damping="0.003221" frictionloss="1.449" range="-0.52359878 0.52359878" actuatorfrcrange="-108 108" />
+                <geom name="Gento Luna_Leg_J5_Link_visual" class="visual" mesh="Gento Luna_Leg_J5_Link" pos="0 0 0" quat="1 0 0 0" />
+                <geom name="Gento Luna_Leg_J5_Link_col0" class="collision" type="cylinder" size="0.089355804 0.12420259" pos="0 0.057750002 -0.038063068" />
+                <body name="Gento Luna_Leg_J6_Link" pos="0 0 0" quat="0.49999816 -0.5 -0.5 -0.50000184">
+                  <inertial pos="-0.00252318 0.00023889 0.35352016" mass="7.693925" fullinertia="0.09791321 0.08468144 0.0667813 0.00040226 0.00387194 -8.696e-05" />
+                  <joint name="Gento Luna_Leg_J6_Joint" armature="2.9184" damping="0.003221" frictionloss="1.449" range="-2.9670597 2.9670597" actuatorfrcrange="-108 108" />
+                  <geom name="Gento Luna_Leg_J6_Link_visual" class="visual" mesh="Gento Luna_Leg_J6_Link" pos="0 0 0" quat="1 0 0 0" />
+                  <geom name="Gento Luna_Leg_J6_Link_col0" class="collision" type="cylinder" size="0.11403389 0.1600125" pos="1.5996397e-05 0 0.36874998" />
+                  <body name="Base_R" pos="0 -0.056 0.3915" quat="0.70710548 0.70710808 0 0">
+                    <inertial pos="1.1648e-04 -9.321e-05 3.390668e-02" mass="0.8553322" fullinertia="0.0006549 0.00066931 0.00080985 -1.5e-07 7.7e-06 2.01e-06" />
+                    <geom name="Base_R_visual" class="visual" mesh="Base_R" pos="0 0 0" quat="1 0 0 0" />
+                    <geom name="Base_R_col0" class="collision" type="cylinder" size="0.041273493 0.048013132" pos="0.00275 0 0.012235898" quat="0.70710678 0.70710678 0 0" />
+                    <body name="Link1_R" pos="0 0 0.1586" quat="1 0 0 0">
+                      <inertial pos="-3.3175e-04 -4.26687e-03 -3.522466e-02" mass="1.537551" fullinertia="0.00366914 0.00394529 0.00131774 1.77e-06 1.342e-05 -0.00023437" />
+                      <joint name="Joint1_R" armature="0.215" damping="0.0003456" frictionloss="0.363" range="-3.0194196 3.0194196" />
+                      <geom name="Link1_R_visual" class="visual" mesh="Link1_R" pos="0 0 0" quat="1 0 0 0" />
+                      <geom name="Link1_R_col0" class="collision" type="capsule" size="0.042603999 0.067507468" pos="0 -7.5139105e-06 -0.028579449" />
+                      <body name="Link2_R" pos="0 0 0" quat="0.70710548 0.70710808 0 0">
+                        <inertial pos="2.044e-05 0.0535881 -0.00881535" mass="1.58697" fullinertia="0.00651482 0.0018653 0.00613149 8.49e-06 1.19e-06 0.00075929" />
+                        <joint name="Joint2_R" armature="0.215" damping="9.93e-05" frictionloss="0.239" range="-2.0943951 2.0943951" />
+                        <geom name="Link2_R_visual" class="visual" mesh="Link2_R" pos="0 0 0" quat="1 0 0 0" />
+                        <geom name="Link2_R_col0" class="collision" type="capsule" size="0.046745963 0.077398248" pos="0 0.038943239 0" quat="0.70710678 0.70710678 0 0" />
+                        <body name="Link3_R" pos="0 0.329 0" quat="0.70710548 -0.70710808 0 0">
+                          <inertial pos="0.00782627 -0.00511917 -0.07354675" mass="1.6637593" fullinertia="0.01097251 0.01136075 0.00157281 -7.013e-05 0.00099536 -0.0004918" />
+                          <joint name="Joint3_R" armature="0.086" damping="0.0006304" frictionloss="0.2517" range="-3.0194196 3.0194196" />
+                          <geom name="Link3_R_visual" class="visual" mesh="Link3_R" pos="0 0 0" quat="1 0 0 0" />
+                          <geom name="Link3_R_col0" class="collision" type="capsule" size="0.041316293 0.10750518" pos="0.01224116 -5.2712858e-07 -0.077523313" />
+                          <body name="Link4_R" pos="0.018 0 0" quat="-2.5973435e-06 2.597353e-06 -0.70710808 0.70710548">
+                            <inertial pos="0.00840183 -0.038565 -0.0073627" mass="1.03775" fullinertia="0.00308966 0.00119659 0.0029308 -0.00038612 7.072e-05 -0.00032564" />
+                            <joint name="Joint4_R" armature="0.086" damping="1.59e-05" frictionloss="0.2101" range="-2.5307274 0.78539816" />
+                            <geom name="Link4_R_visual" class="visual" mesh="Link4_R" pos="0 0 0" quat="1 0 0 0" />
+                            <geom name="Link4_R_col0" class="collision" type="cylinder" size="0.045619652 0.06305933" pos="0.0045803972 -0.025812564 -1.0022894e-05" quat="0.70710678 0.70710678 0 0" />
+                            <body name="Link5_R" pos="0.018 -0.264 0" quat="-2.5973435e-06 2.597353e-06 -0.70710808 0.70710548">
+                              <inertial pos="5.008e-04 -2.23923e-03 -9.253416e-02" mass="1.000479" fullinertia="0.00217057 0.00195131 0.00084222 -1.142e-05 6.68e-06 -3.059e-05" />
+                              <joint name="Joint5_R" armature="0.076288" damping="3.19e-05" frictionloss="0.03835" range="-3.0194196 3.0194196" />
+                              <geom name="Link5_R_visual" class="visual" mesh="Link5_R" pos="0 0 0" quat="1 0 0 0" />
+                              <geom name="Link5_R_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                              <body name="Link6_R" pos="0 0 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                                <inertial pos="-1.8634e-04 2.3824e-04 5.829e-04" mass="0.3906229" fullinertia="0.00019943 0.00017163 0.00018567 -1.18e-06 -3e-07 3.53e-06" />
+                                <joint name="Joint6_R" armature="0.076288" damping="0.0002529" frictionloss="0.3977" range="-1.0471976 1.0471976" />
+                                <geom name="Link6_R_visual" class="visual" mesh="Link6_R" pos="0 0 0" quat="1 0 0 0" />
+                                <geom name="Link6_R_col0" class="collision" type="sphere" size="0.028055422" pos="0 0 0" />
+                                <body name="Link7_R" pos="0 0 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                                  <inertial pos="-5.2431e-04 -3.976234e-02 7.27342e-03" mass="0.37939" fullinertia="0.00070308 0.00030365 0.00058833 5.97e-06 7.3e-07 0.00012769" />
+                                  <joint name="Joint7_R" armature="0.076288" damping="0.0001402" frictionloss="0.1323" range="-1.5707963 1.5707963" />
+                                  <geom name="Link7_R_visual" class="visual" mesh="Link7_R" pos="0 0 0" quat="1 0 0 0" />
+                                  <geom name="Link7_R_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                                  <body name="TCP_Link_R" pos="0 -0.087 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                                    <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
+                                    <geom name="TCP_Link_R_marker" class="visual" type="sphere" size="0.006" rgba="0.9 0.4 0.1 1" />
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="Base_L" pos="0 0.056 0.3915" quat="0.70710548 -0.70710808 0 0">
+                    <inertial pos="1.1648e-04 -9.321e-05 3.390668e-02" mass="0.8553322" fullinertia="0.0006549 0.00066931 0.00080985 -1.5e-07 7.7e-06 2.01e-06" />
+                    <geom name="Base_L_visual" class="visual" mesh="Base_L" pos="0 0 0" quat="1 0 0 0" />
+                    <geom name="Base_L_col0" class="collision" type="cylinder" size="0.041273493 0.048013132" pos="0.00275 0 0.012235898" quat="0.70710678 0.70710678 0 0" />
+                    <body name="Link1_L" pos="0 0 0.1586" quat="1 0 0 0">
+                      <inertial pos="-3.3175e-04 -4.26687e-03 -3.522466e-02" mass="1.537551" fullinertia="0.00366914 0.00394529 0.00131774 1.77e-06 1.342e-05 -0.00023437" />
+                      <joint name="Joint1_L" armature="0.215" damping="0.0003456" frictionloss="0.363" range="-3.0194196 3.0194196" />
+                      <geom name="Link1_L_visual" class="visual" mesh="Link1_L" pos="0 0 0" quat="1 0 0 0" />
+                      <geom name="Link1_L_col0" class="collision" type="capsule" size="0.042603999 0.067507468" pos="0 -7.5139105e-06 -0.028579449" />
+                      <body name="Link2_L" pos="0 0 0" quat="0.70710548 0.70710808 0 0">
+                        <inertial pos="2.044e-05 0.0535881 -0.00881535" mass="1.58697" fullinertia="0.00651482 0.0018653 0.00613149 8.49e-06 1.19e-06 0.00075929" />
+                        <joint name="Joint2_L" armature="0.215" damping="9.93e-05" frictionloss="0.239" range="-2.0943951 2.0943951" />
+                        <geom name="Link2_L_visual" class="visual" mesh="Link2_L" pos="0 0 0" quat="1 0 0 0" />
+                        <geom name="Link2_L_col0" class="collision" type="capsule" size="0.046745963 0.077398248" pos="0 0.038943239 0" quat="0.70710678 0.70710678 0 0" />
+                        <body name="Link3_L" pos="0 0.329 0" quat="0.70710548 -0.70710808 0 0">
+                          <inertial pos="0.00782627 -0.00511917 -0.07354675" mass="1.6637593" fullinertia="0.01097251 0.01136075 0.00157281 -7.013e-05 0.00099536 -0.0004918" />
+                          <joint name="Joint3_L" armature="0.086" damping="0.0006304" frictionloss="0.2517" range="-3.0194196 3.0194196" />
+                          <geom name="Link3_L_visual" class="visual" mesh="Link3_L" pos="0 0 0" quat="1 0 0 0" />
+                          <geom name="Link3_L_col0" class="collision" type="capsule" size="0.041316293 0.10750518" pos="0.01224116 -5.2712858e-07 -0.077523313" />
+                          <body name="Link4_L" pos="0.018 0 0" quat="-2.5973435e-06 2.597353e-06 -0.70710808 0.70710548">
+                            <inertial pos="0.00840183 -0.038565 -0.0073627" mass="1.03775" fullinertia="0.00308966 0.00119659 0.0029308 -0.00038612 7.072e-05 -0.00032564" />
+                            <joint name="Joint4_L" armature="0.086" damping="1.59e-05" frictionloss="0.2101" range="-2.5307274 0.78539816" />
+                            <geom name="Link4_L_visual" class="visual" mesh="Link4_L" pos="0 0 0" quat="1 0 0 0" />
+                            <geom name="Link4_L_col0" class="collision" type="cylinder" size="0.045619652 0.06305933" pos="0.0045803972 -0.025812564 -1.0022894e-05" quat="0.70710678 0.70710678 0 0" />
+                            <body name="Link5_L" pos="0.018 -0.264 0" quat="-2.5973435e-06 2.597353e-06 -0.70710808 0.70710548">
+                              <inertial pos="-5.008e-04 2.23923e-03 -9.253416e-02" mass="1.000479" fullinertia="0.00217057 0.00195131 0.00084222 -1.142e-05 -6.68e-06 3.059e-05" />
+                              <joint name="Joint5_L" armature="0.076288" damping="3.19e-05" frictionloss="0.03835" range="-3.0194196 3.0194196" />
+                              <geom name="Link5_L_visual" class="visual" mesh="Link5_L" pos="0 0 0" quat="1 0 0 0" />
+                              <geom name="Link5_L_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                              <body name="Link6_L" pos="0 0 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                                <inertial pos="1.8634e-04 2.3824e-04 -5.829e-04" mass="0.3906229" fullinertia="0.00019943 0.00017163 0.00018567 1.18e-06 -3e-07 -3.53e-06" />
+                                <joint name="Joint6_L" armature="0.076288" damping="0.0002529" frictionloss="0.3977" range="-1.0471976 1.0471976" />
+                                <geom name="Link6_L_visual" class="visual" mesh="Link6_L" pos="0 0 0" quat="1 0 0 0" />
+                                <geom name="Link6_L_col0" class="collision" type="sphere" size="0.028055422" pos="0 0 0" />
+                                <body name="Link7_L" pos="0 0 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                                  <inertial pos="-5.2431e-04 -3.976234e-02 7.27342e-03" mass="0.37939" fullinertia="0.00070308 0.00030365 0.00058833 5.97e-06 7.3e-07 0.00012769" />
+                                  <joint name="Joint7_L" armature="0.076288" damping="0.0001402" frictionloss="0.1323" range="-1.5707963 1.5707963" />
+                                  <geom name="Link7_L_visual" class="visual" mesh="Link7_L" pos="0 0 0" quat="1 0 0 0" />
+                                  <geom name="Link7_L_col0" class="collision" type="sphere" size="0.03" pos="0 0 0" />
+                                  <body name="TCP_Link_L" pos="0 -0.087 0" quat="0.49999816 0.5 -0.5 0.50000184">
+                                    <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
+                                    <geom name="TCP_Link_L_marker" class="visual" type="sphere" size="0.006" rgba="0.9 0.4 0.1 1" />
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <body name="Head_J1_Link" pos="0 0 0.6376" quat="1 0 0 0">
+                    <inertial pos="0 0.01744095 -0.00430266" mass="1.1" fullinertia="0.00175163 0.00117904 0.00169733 4e-08 0 8.664e-05" />
+                    <joint name="Head_J1_joint" armature="0.088" range="-1.5707963 1.5707963" actuatorfrcrange="-18 18" />
+                    <geom name="Head_J1_Link_visual" class="visual" mesh="Head_J1_Link" pos="0 0 0" quat="1 0 0 0" />
+                    <geom name="Head_J1_Link_col0" class="collision" type="cylinder" size="0.044573095 0.06058684" pos="-1.8626451e-08 -0.015320571 -0.01682131" />
+                    <body name="Head_J2_Link" pos="0 0 0" quat="0.70710548 -0.70710808 0 0">
+                      <inertial pos="0.00747095849665602 0.616397629334595 0" mass="2.2" fullinertia="0.00768053 0.00961263 0.00660884 8.38e-06 0.00110945 2.98e-06" />
+                      <joint name="Head_J2_Joint" armature="0.088" range="-0.43633231 0.43633231" actuatorfrcrange="-18 18" />
+                      <geom name="Head_J2_Link_visual" class="visual" mesh="Head_J2_Link" pos="0 0 0" quat="1 0 0 0" />
+                      <geom name="Head_J2_Link_col0" class="collision" type="cylinder" size="0.076126434 0.09030968" pos="0.044680402 -0.049889252 -4.6938658e-06" quat="0.70710678 0.70710678 0 0" />
+                      <body name="Head_Depth Carema_Link" pos="0.12985 -0.10988 0.047247" quat="0.17702606 -0.68458811 -0.17702857 -0.68458876">
+                        <inertial pos="-0.0438884365760138 2.1072465481442E-05 -0.0121682052264719" mass="0.075352833" fullinertia="5.4042253e-06 7.9217726e-05 8.2694736e-05 3.3999988e-07 9.1570157e-07 -6.2491279e-08" />
+                        <geom name="Head_Depth Carema_Link_visual" class="visual" mesh="Head_Depth Carema_Link" pos="0 0 0" quat="1 0 0 0" />
+                        <geom name="Head_Depth Carema_Link_col0" class="collision" type="capsule" size="0.012 0.052699268" pos="-0.047499705 0.00016370555 -0.012899955" quat="0.70710678 0 0.70710678 0" />
+                      </body>
+                      <body name="Head_Right Eye_Link" pos="0.12111 -0.07333 0.030253" quat="0.70710548 0 0.70710808 0">
+                        <inertial pos="0.0300050629257677 4.04479880145026E-06 -0.0185662755909853" mass="0.05589065" fullinertia="5.7021243e-06 3.4758749e-05 3.6444444e-05 5.5344649e-09 1.4231294e-09 1.6274403e-09" />
+                        <geom name="Head_Right Eye_Link_visual" class="visual" mesh="Head_Right Eye_Link" pos="0 0 0" quat="1 0 0 0" />
+                        <geom name="Head_Right Eye_Link_col0" class="collision" type="capsule" size="0.014791941 0.035700001" pos="0.029999999 0 -0.019328348" quat="0.70710678 0 0.70710678 0" />
+                      </body>
+                      <body name="left_eye" pos="0.11499 0.11284 -0.029747" quat="0.70710548 0 0.70710808 0">
+                        <inertial pos="0 0 0" mass="1e-6" diaginertia="1e-9 1e-9 1e-9" />
+                      </body>
+                    </body>
+                  </body>
+                  <body name="Waist_Depth Carema_Link" pos="0.09564 0.017668 0.21524" quat="0.43045734 0.56098542 0.56098748 0.43045892">
+                    <inertial pos="-0.0157868700986424 -3.97255286611609E-05 -0.0143913563186459" mass="0.028547017" fullinertia="2.0047001e-06 1.7630654e-05 1.8907108e-05 1.8970934e-08 1.8471611e-07 -3.2916894e-09" />
+                    <geom name="Waist_Depth Carema_Link_visual" class="visual" mesh="Waist_Depth Carema_Link" pos="0 0 0" quat="1 0 0 0" />
+                    <geom name="Waist_Depth Carema_Link_col0" class="collision" type="capsule" size="0.012 0.0381901" pos="-0.017593965 2.3264438e-05 -0.012425001" quat="0.70710678 0 0.70710678 0" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="base_Link" body2="front left wheel_Link_1" />
+    <exclude body1="front left wheel_Link_1" body2="front left wheel_Link_2" />
+    <exclude body1="base_Link" body2="front right wheel_Link_1" />
+    <exclude body1="front right wheel_Link_1" body2="front right wheel_Link_2" />
+    <exclude body1="base_Link" body2="rear left wheel_Link_1" />
+    <exclude body1="rear left wheel_Link_1" body2="rear left wheel_Link_2" />
+    <exclude body1="base_Link" body2="rear right wheel_Link_1" />
+    <exclude body1="rear right wheel_Link_1" body2="rear right wheel_Link_2" />
+    <exclude body1="base_Link" body2="ZLD_Link" />
+    <exclude body1="base_Link" body2="YLD_Link" />
+    <exclude body1="base_Link" body2="C1_Link" />
+    <exclude body1="base_Link" body2="C2_Link" />
+    <exclude body1="base_Link" body2="C3_Link" />
+    <exclude body1="base_Link" body2="C4_Link" />
+    <exclude body1="base_Link" body2="C5_Link" />
+    <exclude body1="base_Link" body2="C6_Link" />
+    <exclude body1="base_Link" body2="C7_Link" />
+    <exclude body1="base_Link" body2="C8_Link" />
+    <exclude body1="base_Link" body2="IMU_Link" />
+    <exclude body1="base_Link" body2="XJ_Link" />
+    <exclude body1="base_Link" body2="Gento Luna_Leg_J1_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Gento Luna_Leg_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Gento Luna_Leg_J3_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Gento Luna_Leg_J4_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Gento Luna_Leg_J5_Link" />
+    <exclude body1="Gento Luna_Leg_J5_Link" body2="Gento Luna_Leg_J6_Link" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Base_R" />
+    <exclude body1="Base_R" body2="Link1_R" />
+    <exclude body1="Link1_R" body2="Link2_R" />
+    <exclude body1="Link2_R" body2="Link3_R" />
+    <exclude body1="Link3_R" body2="Link4_R" />
+    <exclude body1="Link4_R" body2="Link5_R" />
+    <exclude body1="Link5_R" body2="Link6_R" />
+    <exclude body1="Link6_R" body2="Link7_R" />
+    <exclude body1="Link7_R" body2="TCP_Link_R" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Base_L" />
+    <exclude body1="Base_L" body2="Link1_L" />
+    <exclude body1="Link1_L" body2="Link2_L" />
+    <exclude body1="Link2_L" body2="Link3_L" />
+    <exclude body1="Link3_L" body2="Link4_L" />
+    <exclude body1="Link4_L" body2="Link5_L" />
+    <exclude body1="Link5_L" body2="Link6_L" />
+    <exclude body1="Link6_L" body2="Link7_L" />
+    <exclude body1="Link7_L" body2="TCP_Link_L" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Head_J1_Link" />
+    <exclude body1="Head_J1_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Head_J2_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Head_J2_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Head_J2_Link" body2="left_eye" />
+    <exclude body1="base_Link" body2="Gento Luna_Leg_J2_Link" />
+    <exclude body1="base_Link" body2="Gento Luna_Leg_J3_Link" />
+    <exclude body1="base_Link" body2="Gento Luna_Leg_J4_Link" />
+    <exclude body1="base_Link" body2="Gento Luna_Leg_J5_Link" />
+    <exclude body1="base_Link" body2="Gento Luna_Leg_J6_Link" />
+    <exclude body1="base_Link" body2="Head_J1_Link" />
+    <exclude body1="base_Link" body2="Head_J2_Link" />
+    <exclude body1="base_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="base_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="base_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Gento Luna_Leg_J3_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Gento Luna_Leg_J4_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Gento Luna_Leg_J5_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Gento Luna_Leg_J6_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Head_J1_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J1_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Gento Luna_Leg_J4_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Gento Luna_Leg_J5_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Gento Luna_Leg_J6_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Head_J1_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J2_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Gento Luna_Leg_J5_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Gento Luna_Leg_J6_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Head_J1_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Gento Luna_Leg_J6_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Head_J1_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J4_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Gento Luna_Leg_J5_Link" body2="Head_J1_Link" />
+    <exclude body1="Gento Luna_Leg_J5_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J5_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J5_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J5_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Head_J2_Link" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Gento Luna_Leg_J6_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Head_J1_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Head_J1_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Head_J1_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Head_J2_Link" body2="Waist_Depth Carema_Link" />
+    <exclude body1="Waist_Depth Carema_Link" body2="Head_Depth Carema_Link" />
+    <exclude body1="Waist_Depth Carema_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="Head_Depth Carema_Link" body2="Head_Right Eye_Link" />
+    <exclude body1="base_Link" body2="front left wheel_Link_2" />
+    <exclude body1="base_Link" body2="front right wheel_Link_2" />
+    <exclude body1="base_Link" body2="rear left wheel_Link_2" />
+    <exclude body1="base_Link" body2="rear right wheel_Link_2" />
+    <exclude body1="base_Link" body2="Base_R" />
+    <exclude body1="base_Link" body2="Link1_R" />
+    <exclude body1="base_Link" body2="Link2_R" />
+    <exclude body1="base_Link" body2="Link3_R" />
+    <exclude body1="base_Link" body2="Link4_R" />
+    <exclude body1="base_Link" body2="Link5_R" />
+    <exclude body1="base_Link" body2="Link6_R" />
+    <exclude body1="base_Link" body2="Link7_R" />
+    <exclude body1="base_Link" body2="TCP_Link_R" />
+    <exclude body1="base_Link" body2="Base_L" />
+    <exclude body1="base_Link" body2="Link1_L" />
+    <exclude body1="base_Link" body2="Link2_L" />
+    <exclude body1="base_Link" body2="Link3_L" />
+    <exclude body1="base_Link" body2="Link4_L" />
+    <exclude body1="base_Link" body2="Link5_L" />
+    <exclude body1="base_Link" body2="Link6_L" />
+    <exclude body1="base_Link" body2="Link7_L" />
+    <exclude body1="base_Link" body2="TCP_Link_L" />
+    <exclude body1="base_Link" body2="left_eye" />
+    <exclude body1="Link7_R" body2="Link5_R" />
+    <exclude body1="Link7_L" body2="Link5_L" />
+  </contact>
+  <keyframe>
+    <key name="home" qpos="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -1.5 0 0.8 0 0 0 1 -1.5 0 0.8 0 0 0 0" />
+  </keyframe>
+  <actuator>
+    <position name="act_front_left_wheel_joint_1" joint="front left wheel_joint_1" kp="4.6031586" kv="0.4884103" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_front_left_wheel_joint_2" joint="front left wheel_joint_2" kp="4.891672" kv="0.51902252" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_front_right_wheel_joint_1" joint="front right wheel_joint_1" kp="4.6031586" kv="0.4884103" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_front_right_wheel_joint_2" joint="front right wheel_joint_2" kp="4.891672" kv="0.51902252" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_rear_left_wheel_joint_1" joint="rear left wheel_joint_1" kp="4.6031226" kv="0.48840648" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_rear_left_wheel_joint_2" joint="rear left wheel_joint_2" kp="4.891672" kv="0.51902252" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_rear_right_wheel_joint_1" joint="rear right wheel_joint_1" kp="4.6031586" kv="0.4884103" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_rear_right_wheel_joint_2" joint="rear right wheel_joint_2" kp="4.891672" kv="0.51902252" ctrlrange="-2.967 2.967" forcerange="-100 100" />
+    <position name="act_Gento_Luna_Leg_J1_Joint" joint="Gento Luna_Leg_J1_Joint" kp="16980.614" kv="1801.6991" ctrlrange="-0.19198622 0.19198622" forcerange="-217 217" />
+    <position name="act_Gento_Luna_Leg_J2_Joint" joint="Gento Luna_Leg_J2_Joint" kp="11826.111" kv="1254.7894" ctrlrange="-0.17453293 1.5707963" forcerange="-217 217" />
+    <position name="act_Gento_Luna_Leg_J3_Joint" joint="Gento Luna_Leg_J3_Joint" kp="5485.3989" kv="582.0189" ctrlrange="-2.443461 0.17453293" forcerange="-217 217" />
+    <position name="act_Gento_Luna_Leg_J4_Joint" joint="Gento Luna_Leg_J4_Joint" kp="1940.2183" kv="205.86356" ctrlrange="-1.9198622 0.95993109" forcerange="-108 108" />
+    <position name="act_Gento_Luna_Leg_J5_Joint" joint="Gento Luna_Leg_J5_Joint" kp="2238.9455" kv="237.55949" ctrlrange="-0.52359878 0.52359878" forcerange="-108 108" />
+    <position name="act_Gento_Luna_Leg_J6_Joint" joint="Gento Luna_Leg_J6_Joint" kp="1161.8572" kv="123.27688" ctrlrange="-2.9670597 2.9670597" forcerange="-108 108" />
+    <position name="act_Joint1_R" joint="Joint1_R" kp="114.59156" kv="34.377468" ctrlrange="-3.0194196 3.0194196" forcerange="-42 42" />
+    <position name="act_Joint2_R" joint="Joint2_R" kp="114.59156" kv="34.377468" ctrlrange="-2.0943951 2.0943951" forcerange="-42 42" />
+    <position name="act_Joint3_R" joint="Joint3_R" kp="114.59156" kv="34.377468" ctrlrange="-3.0194196 3.0194196" forcerange="-22 22" />
+    <position name="act_Joint4_R" joint="Joint4_R" kp="91.673247" kv="22.918312" ctrlrange="-2.5307274 0.78539816" forcerange="-22 22" />
+    <position name="act_Joint5_R" joint="Joint5_R" kp="57.29578" kv="11.459156" ctrlrange="-3.0194196 3.0194196" forcerange="-6.2 6.2" />
+    <position name="act_Joint6_R" joint="Joint6_R" kp="57.29578" kv="11.459156" ctrlrange="-1.0471976 1.0471976" forcerange="-6.2 6.2" />
+    <position name="act_Joint7_R" joint="Joint7_R" kp="57.29578" kv="11.459156" ctrlrange="-1.5707963 1.5707963" forcerange="-6.2 6.2" />
+    <position name="act_Joint1_L" joint="Joint1_L" kp="114.59156" kv="34.377468" ctrlrange="-3.0194196 3.0194196" forcerange="-42 42" />
+    <position name="act_Joint2_L" joint="Joint2_L" kp="114.59156" kv="34.377468" ctrlrange="-2.0943951 2.0943951" forcerange="-42 42" />
+    <position name="act_Joint3_L" joint="Joint3_L" kp="114.59156" kv="34.377468" ctrlrange="-3.0194196 3.0194196" forcerange="-22 22" />
+    <position name="act_Joint4_L" joint="Joint4_L" kp="91.673247" kv="22.918312" ctrlrange="-2.5307274 0.78539816" forcerange="-22 22" />
+    <position name="act_Joint5_L" joint="Joint5_L" kp="57.29578" kv="11.459156" ctrlrange="-3.0194196 3.0194196" forcerange="-6.2 6.2" />
+    <position name="act_Joint6_L" joint="Joint6_L" kp="57.29578" kv="11.459156" ctrlrange="-1.0471976 1.0471976" forcerange="-6.2 6.2" />
+    <position name="act_Joint7_L" joint="Joint7_L" kp="57.29578" kv="11.459156" ctrlrange="-1.5707963 1.5707963" forcerange="-5.5 5.5" />
+    <position name="act_Head_J1_joint" joint="Head_J1_joint" kp="432.82532" kv="5.5109032" ctrlrange="-1.5707963 1.5707963" forcerange="-18 18" />
+    <position name="act_Head_J2_Joint" joint="Head_J2_Joint" kp="4000" kv="200" ctrlrange="-0.43633231 0.43633231" forcerange="-18 18" />
+  </actuator>
+</mujoco>
