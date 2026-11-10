@@ -1,0 +1,1697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Pro-m6-696">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000885090982553072 0.000594863336655871 0.393864441612288"
+        rpy="0 0 0" />
+      <mass
+        value="73.8" />
+      <inertia
+        ixx="1.63396211040209"
+        ixy="-0.00125697775844925"
+        ixz="-9.74592909937035E-05"
+        iyy="1.65663964009571"
+        iyz="0.000353557770744909"
+        izz="0.410329439994373" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1_R">
+    <inertial>
+      <origin
+        xyz="-3.3175e-04 -4.26687e-03 -3.522466e-02"
+        rpy="0 0 0" />
+      <mass
+        value="1.537551" />
+      <inertia
+        ixx="3.66914e-03"
+        ixy="1.77e-06"
+        ixz="1.342e-05"
+        iyy="3.94529e-03"
+        iyz="-2.3437e-04"
+        izz="1.31774e-03" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link1_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link1_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_R"
+    type="revolute">
+    <origin
+        xyz="-0.2005 0 1.121"
+      rpy="1.5707963267949 0 -1.57079632689048" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0194"
+      upper="3.0194"
+      effort="35"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link2_R">
+    <inertial>
+      <origin
+        xyz="2.044e-05 0.0535881 -0.00881535"
+        rpy="0 0 0" />
+      <mass
+        value="1.58697" />
+      <inertia
+        ixx="0.00651482"
+        ixy="8.49e-06"
+        ixz="1.19e-06"
+        iyy="0.0018653"
+        iyz="0.00075929"
+        izz="0.00613149" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link2_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link2_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_R"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link1_R" />
+    <child
+      link="Link2_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0595"
+      upper="2.0595"
+      effort="35"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link3_R">
+    <inertial>
+      <origin
+        xyz="0.00796684 -0.00357354 -0.0495339"
+        rpy="0 0 0" />
+      <mass
+        value="1.2915" />
+      <inertia
+        ixx="0.00420137"
+        ixy="-2.925e-05"
+        ixz="0.00054194"
+        iyy="0.00445361"
+        iyz="-0.00016742"
+        izz="0.00106698" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link3_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link3_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_R"
+    type="revolute">
+    <origin
+      xyz="0 0.264 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Link2_R" />
+    <child
+      link="Link3_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0194"
+      upper="3.0194"
+      effort="18"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link4_R">
+    <inertial>
+      <origin
+        xyz="0.00840183 -0.038565 -0.0073627"
+        rpy="0 0 0" />
+      <mass
+        value="1.03775" />
+      <inertia
+        ixx="0.00308966"
+        ixy="-0.00038612"
+        ixz="7.072e-05"
+        iyy="0.00119659"
+        iyz="-0.00032564"
+        izz="0.0029308" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link4_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link4_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4_R"
+    type="revolute">
+    <origin
+      xyz="0.018 0 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="Link3_R" />
+    <child
+      link="Link4_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.5307"
+      upper="0.7854"
+      effort="18"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link5_R">
+    <inertial>
+      <origin
+        xyz="5.008e-04 -2.23923e-03 -9.253416e-02"
+        rpy="0 0 0" />
+      <mass
+        value="1.000479" />
+      <inertia
+        ixx="2.17057e-03"
+        ixy="-1.142e-05"
+        ixz="6.68e-06"
+        iyy="1.95131e-03"
+        iyz="-3.059e-05"
+        izz="8.4222e-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link5_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link5_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint5_R"
+    type="revolute">
+    <origin
+      xyz="0.018 -0.264 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="Link4_R" />
+    <child
+      link="Link5_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0194"
+      upper="3.0194"
+      effort="5.5"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link6_R">
+    <inertial>
+      <origin
+        xyz="-1.8634e-04 2.3824e-04 5.829e-04"
+        rpy="0 0 0" />
+      <mass
+        value="0.3906229" />
+      <inertia
+        ixx="1.9943e-04"
+        ixy="-1.1800e-06"
+        ixz="-3.0000e-07"
+        iyy="1.7163e-04"
+        iyz="3.5300e-06"
+        izz="1.8567e-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link6_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link6_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint6_R"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link5_R" />
+    <child
+      link="Link6_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.0472"
+      upper="1.0472"
+      effort="5.5"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link7_R">
+    <inertial>
+      <origin
+        xyz="-5.2431e-04 -3.976234e-02 7.27342e-03"
+        rpy="0 0 0" />
+      <mass
+        value="0.37939" />
+      <inertia
+        ixx="7.0308e-04"
+        ixy="5.97e-06"
+        ixz="7.30e-07"
+        iyy="3.0365e-04"
+        iyz="1.2769e-04"
+        izz="5.8833e-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link7_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link7_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint7_R"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link6_R" />
+    <child
+      link="Link7_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="5.5"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="TCP_Link_R">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/TCP_Link_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/TCP_Link_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JointTCP_R"
+    type="fixed">
+    <origin
+      xyz="0 -0.087 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link7_R" />
+    <child
+      link="TCP_Link_R" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+<link
+    name="Link8_R">
+    <inertial>
+      <origin
+        xyz="0.114173673705173 1.14500734671452E-07 0.0234553428952367"
+        rpy="0 0 0" />
+      <mass
+        value="0.0880205156348504" />
+      <inertia
+        ixx="0.000108662771638114"
+        ixy="-6.3925533063502E-10"
+        ixz="-3.88093499443002E-05"
+        iyy="0.000118230682353423"
+        iyz="-2.130052703709E-10"
+        izz="4.40320418563213E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link8_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link8_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint8_R"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="TCP_Link_R" />
+    <child
+      link="Link8_R" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+  <link
+ name="Link_Right_wrist">
+    <inertial>
+      <origin
+        xyz="0.0717359763450741 0.0442631391055814 -0.0224446909407665"
+        rpy="0 0 0" />
+      <mass
+        value="0.037" />
+      <inertia
+        ixx="0.0152058025502204"
+        ixy="-0.00178829198094161"
+        ixz="-0.00146034276793319"
+        iyy="0.0216384979545458"
+        iyz="-0.00271933560557955"
+        izz="0.0203994220827433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link_Right_wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link_Right_wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Right_wrist"
+    type="fixed">
+    <origin
+      xyz="0.06 0 0.057822"
+      rpy="-1.5707  -0.00012967 1.3615" /> />
+    <parent
+      link="Link8_R" />
+    <child
+      link="Link_Right_wrist" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+name="Arm_R9_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0 "
+        rpy="0 0 0" />
+      <mass
+        value="0.21436" />
+      <inertia
+        ixx="0.00017299"
+        ixy="4.2904E-07"
+        ixz="4.2578E-07"
+        iyy="0.00021771"
+        iyz="1.5375E-09"
+        izz="9.8853E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_R9_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_R9_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_R9_Joint"
+    type="fixed">
+    <origin
+        xyz="0 0 -0.038"
+      rpy="-1.5708 0 -3.1416" />
+    <parent
+      link="Link8_R" />
+    <child
+      link="Arm_R9_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Arm_R10_Link">
+    <inertial>
+      <origin
+        xyz="-0.00090072 -0.14322 0.057244"
+        rpy="0 0 0" />
+      <mass
+        value="0.027748" />
+      <inertia
+        ixx="9.6216E-06"
+        ixy="-9.9808E-08"
+        ixz="1.7315E-08"
+        iyy="3.5256E-06"
+        iyz="-1.3005E-06"
+        izz="1.0224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_R10_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_R10_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_R10_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Arm_R9_Link" />
+    <child
+      link="Arm_R10_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.04"
+      effort="30"
+      velocity="0" />
+  </joint>
+  <link
+    name="Arm_R11_Link">
+    <inertial>
+      <origin
+        xyz="-0.00044761 1.9362 0.057244"
+        rpy="0 0 0" />
+      <mass
+        value="0.027748" />
+      <inertia
+        ixx="9.6216E-06"
+        ixy="-9.9808E-08"
+        ixz="-1.7315E-08"
+        iyy="3.5256E-06"
+        iyz="1.3005E-06"
+        izz="1.0224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_R11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_R11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_R11_Joint"
+    type="prismatic">
+    <origin
+      xyz="0.0013483 1.793 0"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="Arm_R9_Link" />
+    <child
+      link="Arm_R11_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.04"
+      effort="30"
+      velocity="0" />
+   <mimic joint="Arm_R10_Joint" multiplier="1" offset="0" />
+  </joint>
+  <link
+    name="Link1_L">
+    <inertial>
+      <origin
+        xyz="-3.3175e-04 -4.26687e-03 -3.522466e-02"
+        rpy="0 0 0" />
+      <mass
+        value="1.537551" />
+      <inertia
+        ixx="3.66914e-03"
+        ixy="1.77e-06"
+        ixz="1.342e-05"
+        iyy="3.94529e-03"
+        iyz="-2.3437e-04"
+        izz="1.31774e-03" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link1_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link1_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1_L"
+    type="revolute">
+    <origin
+  xyz="0.2005 0 1.121"
+      rpy="-1.5707963267949 0 -1.57079632689048" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0194"
+      upper="3.0194"
+      effort="35"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link2_L">
+    <inertial>
+      <origin
+        xyz="2.044e-05 0.0535881 -0.00881535"
+        rpy="0 0 0" />
+      <mass
+        value="1.58697" />
+      <inertia
+        ixx="0.00651482"
+        ixy="8.49e-06"
+        ixz="1.19e-06"
+        iyy="0.0018653"
+        iyz="0.00075929"
+        izz="0.00613149" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link2_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link2_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2_L"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link1_L" />
+    <child
+      link="Link2_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.0595"
+      upper="2.0595"
+      effort="35"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link3_L">
+    <inertial>
+      <origin
+        xyz="0.00796684 -0.00357354 -0.0495339"
+        rpy="0 0 0" />
+      <mass
+        value="1.2915" />
+      <inertia
+        ixx="0.00420137"
+        ixy="-2.925e-05"
+        ixz="0.00054194"
+        iyy="0.00445361"
+        iyz="-0.00016742"
+        izz="0.00106698" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link3_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link3_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3_L"
+    type="revolute">
+    <origin
+      xyz="0 0.264 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="Link2_L" />
+    <child
+      link="Link3_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0194"
+      upper="3.0194"
+      effort="18"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link4_L">
+    <inertial>
+      <origin
+        xyz="0.00840183 -0.038565 -0.0073627"
+        rpy="0 0 0" />
+      <mass
+        value="1.03775" />
+      <inertia
+        ixx="0.00308966"
+        ixy="-0.00038612"
+        ixz="7.072e-05"
+        iyy="0.00119659"
+        iyz="-0.00032564"
+        izz="0.0029308" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link4_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link4_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4_L"
+    type="revolute">
+    <origin
+      xyz="0.018 0 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="Link3_L" />
+    <child
+      link="Link4_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.5307"
+      upper="0.7854"
+      effort="18"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link5_L">
+    <inertial>
+      <origin
+        xyz="-5.008e-04 2.23923e-03 -9.253416e-02"
+        rpy="0 0 0" />
+      <mass
+        value="1.000479" />
+      <inertia
+        ixx="2.17057e-03"
+        ixy="-1.142e-05"
+        ixz="-6.68e-06"
+        iyy="1.95131e-03"
+        iyz="3.059e-05"
+        izz="8.4222e-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link5_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link5_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint5_L"
+    type="revolute">
+    <origin
+      xyz="0.018 -0.264 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="Link4_L" />
+    <child
+      link="Link5_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0194"
+      upper="3.0194"
+      effort="5.5"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link6_L">
+    <inertial>
+      <origin
+        xyz="1.8634e-04 2.3824e-04 -5.829e-04"
+        rpy="0 0 0" />
+      <mass
+        value="0.3906229" />
+      <inertia
+        ixx="1.9943e-04"
+        ixy="1.1800e-06"
+        ixz="-3.0000e-07"
+        iyy="1.7163e-04"
+        iyz="-3.5300e-06"
+        izz="1.8567e-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link6_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link6_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint6_L"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link5_L" />
+    <child
+      link="Link6_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.0472"
+      upper="1.0472"
+      effort="5.5"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="Link7_L">
+    <inertial>
+      <origin
+        xyz="-5.2431e-04 -3.976234e-02 7.27342e-03"
+        rpy="0 0 0" />
+      <mass
+        value="0.37939" />
+      <inertia
+        ixx="7.0308e-04"
+        ixy="5.97e-06"
+        ixz="7.30e-07"
+        iyy="3.0365e-04"
+        iyz="1.2769e-04"
+        izz="5.8833e-04" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link7_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link7_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint7_L"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link6_L" />
+    <child
+      link="Link7_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="5.5"
+      velocity="3.1416" />
+  </joint>
+  <link
+    name="TCP_Link_L">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/TCP_Link_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/TCP_Link_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="JointTCP_L"
+    type="fixed">
+    <origin
+      xyz="0 -0.087 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link7_L" />
+    <child
+      link="TCP_Link_L" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+<link
+    name="Link8_L">
+    <inertial>
+      <origin
+        xyz="1.1276190270415E-07 -0.11417365347384 0.0234553552836059"
+        rpy="0 0 0" />
+      <mass
+        value="0.088020543548932" />
+      <inertia
+        ixx="0.000118230671508944"
+        ixy="6.60824120380282E-10"
+        ixz="-2.10338428639125E-10"
+        iyy="0.00010866282572157"
+        iyz="3.88093041447579E-05"
+        izz="4.4031984148421E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link8_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link8_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint8_L"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="TCP_Link_L" />
+    <child
+      link="Link8_L" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+<link
+    name="Link_Left_wrist">
+    <inertial>
+      <origin
+        xyz="0.022446638135212 0.0442631448823432 0.0717353604419828"
+        rpy="0 0 0" />
+      <mass
+        value="0.037" />
+      <inertia
+        ixx="0.0203995050043586"
+        ixy="0.00271928690211307"
+        ixz="0.00146020444332052"
+        iyy="0.0216385038249464"
+        iyz="-0.00178836359279817"
+        izz="0.0152057269287356" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link_Left_wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Link_Left_wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Left_wrist"
+    type="fixed">
+    <origin
+     xyz="0.06 0 0.057822"
+      rpy="-1.5707  -0.00012967 1.3615" />
+    <parent
+      link="Link8_L" />
+    <child
+      link="Link_Left_wrist" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+<link
+    name="Arm_L9_Link">
+    <inertial>
+      <origin
+        xyz="-0.0015934 -0.085718 1.7355E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.21436" />
+      <inertia
+        ixx="0.00017299"
+        ixy="4.2902E-07"
+        ixz="4.2581E-07"
+        iyy="0.00021771"
+        iyz="1.6026E-09"
+        izz="9.8853E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_L9_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_L9_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_L9_Joint"
+    type="fixed">
+    <origin
+         xyz="0 0 -0.038"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="Link8_L" />
+    <child
+      link="Arm_L9_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Arm_L10_Link">
+    <inertial>
+      <origin
+        xyz="-0.00090072 -0.14322 0.057244"
+        rpy="0 0 0" />
+      <mass
+        value="0.027748" />
+      <inertia
+        ixx="9.6216E-06"
+        ixy="-9.9808E-08"
+        ixz="1.7315E-08"
+        iyy="3.5256E-06"
+        iyz="-1.3005E-06"
+        izz="1.0224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_L10_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_L10_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_L10_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Arm_L9_Link" />
+    <child
+      link="Arm_L10_Link" />
+    <axis
+       xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.04"
+      effort="30"
+      velocity="0" />
+  </joint>
+  <link
+    name="Arm_L11_Link">
+    <inertial>
+      <origin
+        xyz="0.00090072 -0.14322 -0.057244"
+        rpy="0 0 0" />
+      <mass
+        value="0.027748" />
+      <inertia
+        ixx="9.6216E-06"
+        ixy="9.9808E-08"
+        ixz="1.7315E-08"
+        iyy="3.5256E-06"
+        iyz="1.3005E-06"
+        izz="1.0224E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_L11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Arm_L11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm_L11_Joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Arm_L9_Link" />
+    <child
+      link="Arm_L11_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.04"
+      effort="30"
+      velocity="0" />
+     <mimic joint="Arm_L10_Joint" multiplier="1" offset="0" />
+  </joint>
+  <link
+    name="Head depth_Link">
+    <inertial>
+      <origin
+        xyz="0.00755197792752615 0.0447149871314828 -0.0282323085850665"
+        rpy="0 0 0" />
+      <mass
+        value="0.057" />
+      <inertia
+        ixx="0.0151893718782562"
+        ixy="-0.00202479695320327"
+        ixz="0.00108721503813786"
+        iyy="0.0161114261843125"
+        iyz="0.00133158298194532"
+        izz="0.0113221906411678" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Head depth_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Head depth_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Head depth_Joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.103394958759943 1.24613640461494"
+      rpy="1.13446401379639 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Head depth_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left monocular_Link">
+    <inertial>
+      <origin
+        xyz="0.0224464348785418 0.0442624071873999 0.0717340002909298"
+        rpy="0 0 0" />
+      <mass
+        value="0.037" />
+      <inertia
+        ixx="0.0204001359756595"
+        ixy="0.00271931213524565"
+        ixz="0.00146016343177208"
+        iyy="0.0216388605995822"
+        iyz="-0.00178861862822358"
+        izz="0.015205712997975" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Left monocular_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Left monocular_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left monocular_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0299997989500314 -0.0864638087460958 1.23304305723052"
+      rpy="0.610866926014432 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left monocular_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Right monocular_Link">
+    <inertial>
+      <origin
+        xyz="-0.0375535523419985 0.0442624126043057 0.0717339894106565"
+        rpy="0 0 0" />
+      <mass
+        value="0.037" />
+      <inertia
+        ixx="0.00562574880130156"
+        ixy="0.000749904930515956"
+        ixz="0.00040266994380895"
+        iyy="0.00596735243559861"
+        iyz="-0.000493247319623666"
+        izz="0.00419328189099375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Right monocular_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Marvin pro_V3.0_M6SLite_615_SHW5G_TJgripper/meshes/Right monocular_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right monocular_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.0300002010092513 -0.0864638087762084 1.23304305725925"
+      rpy="0.610866926014432 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right monocular_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
