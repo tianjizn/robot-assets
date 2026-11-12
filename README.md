@@ -29,6 +29,6 @@ gh release download v2026.11.11 -p 'Luna_V3*'
 
 ## 许可证
 
-本仓库的资源文件基于 [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) 许可。详见 [LICENSE](LICENSE) 文件。
+本仓库的资源文件基于 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) 许可。详见 [LICENSE](LICENSE) 文件。
 
 Copyright © 2026 tianjizn.
