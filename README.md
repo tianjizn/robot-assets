@@ -2,7 +2,7 @@
 
 天机机器人（tianjizn）机器人模型资源仓库，收录 URDF / MJCF 模型与网格（mesh）文件。
 
-模型网格体积较大，**推荐通过 [GitHub Releases](https://github.com/tianjizn/robot-assets/releases) 按需下载**，不需要克隆整个仓库。
+模型网格体积较大，**全部资源通过 [GitHub Releases](https://github.com/tianjizn/robot-assets/releases) 按需下载**。仓库本身只保留本 README 与许可证文件，不存放模型文件，clone 体积极小。
 
 ## 机型与 Release 对应关系
 
@@ -139,18 +139,13 @@ Gento_Luna_V3.0_M6SLite_750_D405GA_Gripper
 | 相机 | `D405GA` / `SHW5G` | 腕部相机型号，缺省表示无相机变体 |
 | 夹爪 | `Gripper` / `TJgripper` | 末端夹爪，缺省表示标准法兰 |
 
-## 仓库目录
+## 资源维护方式
 
-仓库同时保留完整的模型文件树，供需要直接浏览源码（URDF/MJCF 文本、STL 网格）的场景使用：
+仓库 main 分支只保留文档与许可证；所有模型资源（URDF / MJCF / 网格）统一托管在 GitHub Release 上，按机型独立迭代：
 
-| 目录 | 对应 Release | 内部层级 |
-|------|--------------|---------|
-| `Luna_V3_URDF/` | `Luna_V3_URDF` | `615臂展/` `680臂展/` `750臂展/` → 各变体 |
-| `双臂_URDF/` | `Marvin_Dual-arm_URDF` | `M6 Lite/` `M6 SRS/` `M6 CCS/` `M20/` → 各变体 |
-| `Pro_V3_URDF/` | `Marvin_Pro_V3_URDF` | `M6_696/` `M6_809/` `M6SLite_615/` → 各变体 |
-| `Skye_V4_URDF/` | `Skye_V4_URDF` | `696臂长系列/` `809臂长系列/` `920臂长系列/` → 各变体 |
-
-> 仓库目录与 Release 包内容一致，只是层级组织方式不同（Release 包已拍平中间层，一个变体一个包）。日常使用建议直接下载 Release 包，避免 clone 大量二进制文件。
+1. 更新某机型资源 → 打包为 `.tar.gz`（一个变体一个包，空格转下划线，剔除 `.DS_Store`）
+2. 新建 Release：首发用机型名 tag，之后更新用 `<机型>-<YYYYMMDD>` tag
+3. 旧 Release 保留不覆盖，可随时回滚
 
 ## 许可证
 
